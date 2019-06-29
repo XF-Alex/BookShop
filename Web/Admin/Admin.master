@@ -1,0 +1,49 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>新知书店-管理后台</title>
+    <link href="CSS/admin.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    <asp:XmlDataSource ID="xdsAdmin" runat="server" DataFile="~/Admin/admin_menu.xml">
+    </asp:XmlDataSource>
+    <div id="header">
+        <img src="images/admin_top.gif" alt="" /></div>
+    <div id="main">
+        <div id="opt_list">
+            <h1>
+                管理员，您好！</h1>
+            <div id="subnav" >
+                <asp:TreeView ID="tvAdmin" runat="server" DataSourceID="xdsAdmin" ImageSet="Arrows"
+                    Width="191px">
+                    <DataBindings>
+                        <asp:TreeNodeBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" />
+                        <asp:TreeNodeBinding DataMember="siteRoot" TextField="title" />
+                    </DataBindings>
+                    <ParentNodeStyle Font-Bold="False" />
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                    <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" VerticalPadding="0px"
+                        ForeColor="#5555DD" />
+                    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px"
+                        NodeSpacing="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+            </div>
+        </div>
+        <div id="breadcrumb" class="black">
+            &nbsp;&nbsp;您现在的位置：
+            <asp:SiteMapPath ID="smpRoad" runat="server">
+                <PathSeparatorStyle BackColor="White" BorderColor="White" />
+            </asp:SiteMapPath>
+        </div>
+        <div id="opt_area">
+            <asp:ContentPlaceHolder ID="cphAdmin" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

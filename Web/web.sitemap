@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode url="~\Default.aspx" title="新知书店"  description="">    
+		<siteMapNode url="BookList.aspx" title="图书列表页"  description=""/>
+		<siteMapNode url="Search.aspx" title="搜索页"  description=""/>
+		<siteMapNode url="" title="订单查询"  description="" />
+		<siteMapNode url="ShoppingCart.aspx" title="购物车"  description="" />
+		<siteMapNode url="~\BookDetail.aspx" title="图书详细页"  description="" />
+		<siteMapNode Id="" url="" title="会员后台" description="">
+			<siteMapNode url="~\Membership\Register.aspx"  title="用户注册"  description="" />
+			<siteMapNode url="~\Membership\Login.aspx"  title="用户登录"  description="" />
+			<siteMapNode url="~\Membership\UserModify.aspx" title="修改个人信息"  description="" />
+			<siteMapNode url=""  title="退出登录"  description="" />
+		</siteMapNode>
+
+		<siteMapNode Id="" url="~\Admin\Default.aspx" title="管理员后台" description="">
+			<siteMapNode url="" title="用户管理" description="">
+				<siteMapNode url="~\Admin\UserList.aspx" title="管理用户" description="" />
+				<siteMapNode url="~\Admin\UserStateManage.aspx" title="状态管理" description="" />
+				<siteMapNode url="~\Admin\UserDetails.aspx"  title="修改用户资料"  description="" />	
+			</siteMapNode>
+			<siteMapNode url="" title="图书管理" description="">
+				<siteMapNode url="~\Admin\CategoryManage.aspx" title="添加图书分类" description="" />
+				<siteMapNode url="~\Admin\BookCategory.aspx" title="为书籍分类" description="" />
+				<siteMapNode url="~\Admin\BookDetail.aspx" title="图书详细信息" description="" />
+				<siteMapNode url="~\Admin\BookList.aspx" title="图书列表" description="" />
+        <siteMapNode url="~\Admin\RecomBookList.aspx" title="推荐图书" description="" />
+			</siteMapNode>
+			<siteMapNode url="" title="订单管理" description="">
+				<siteMapNode url="~\Admin\OrderList.aspx" title="审核订单" description="" />
+        <siteMapNode url="~\Admin\OrderDetail.aspx" title="详细订单" description="" />
+			</siteMapNode>
+			<siteMapNode url="~\Membership\LoginOut.aspx" title="退出" description="管理员退出">
+		</siteMapNode>
+		</siteMapNode>
+	</siteMapNode>	
+</siteMap>
